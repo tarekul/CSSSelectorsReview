@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Find Developers on Startup Matchmaker</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Code goes here... -->
+<section class="plzignoreme">
+<h1 class="toggle hidden js-toggle">
+    CSS ID Selectors (click for instructions)
+    <span class="plus">+</span>
+    <span class="minus">&mdash;</span>
+</h1>
+<div class="instructions hidden js-instr">
+    <p class="instructions__info">
+        Please update styles to have the markup appear like the attached image -- in this case we added an ID attribute to the verse that is the chorus (and called it bridge)
+    </p>
+    <h2 class="instructions__info">Hints</h2>
+    <p class="instructions__info">
+        The space to the left of all the text is 20 pixels<br>
+        The bridge font is 16 pixels<br>
+        Use common color names and NOT hex or rgb<br>
+        Helvetica is the font used<br>
+        <a href="http://fewd.us/FEWDpress/wp-content/uploads/2014/08/Screen-Shot-2014-08-23-at-1.31.57-AM.png">
+            CLICK HERE TO OPEN IMAGE IN NEW PAGE
+        </a>
+    </p>
+    <div class="instructions__img">
+        <img src="http://fewd.us/FEWDpress/wp-content/uploads/2014/08/Screen-Shot-2014-08-23-at-1.31.57-AM.png">
+    </div>
+</div>
+</section>
+    <script>
+        const toggle = document.querySelector('.js-toggle');
+        const instr = document.querySelector('.js-instr');
+
+        toggle.addEventListener('click', (e) => {
+            let removable, addable;
+            if ( toggle.classList.contains('hidden') ) {
+                removable = 'hidden';
+                addable = 'shown';
+            }
+            else if ( toggle.classList.contains('shown') ) {
+                removable = 'shown';
+                addable = 'hidden';
+            }
+            
+            instr.classList.remove(removable, addable);
+            toggle.classList.remove(removable);
+            
+            instr.classList.add(addable);
+            toggle.classList.add(addable);
+        });
+
+    </script>
+</body>
+</html>

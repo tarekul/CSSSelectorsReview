@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Find Developers on Startup Matchmaker</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Code goes here... -->
+    <section class="plzignoreme">
+    <h1 class="toggle hidden js-toggle">
+        CSS Class Selectors (click for instructions)
+        <span class="plus">+</span>
+        <span class="minus">&mdash;</span>
+    </h1>
+    <div class="instructions hidden js-instr">
+        <p class="instructions__info">Please update styling on the classes and tags provided to have the markup look like the attached image</p>
+        <div class="instructions__img">
+            <img src="http://fewd.us/FEWDpress/wp-content/uploads/2014/08/Screen-Shot-2014-08-23-at-1.25.31-AM.png">
+        </div>
+    </div>
+    </section>
+
+    <script>
+        const toggle = document.querySelector('.js-toggle');
+        const instr = document.querySelector('.js-instr');
+
+        toggle.addEventListener('click', (e) => {
+            let removable, addable;
+            if ( toggle.classList.contains('hidden') ) {
+                removable = 'hidden';
+                addable = 'shown';
+            }
+            else if ( toggle.classList.contains('shown') ) {
+                removable = 'shown';
+                addable = 'hidden';
+            }
+            
+            instr.classList.remove(removable, addable);
+            toggle.classList.remove(removable);
+            
+            instr.classList.add(addable);
+            toggle.classList.add(addable);
+        });
+
+    </script>
+</body>
+</html>
