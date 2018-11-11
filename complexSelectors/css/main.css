@@ -1,0 +1,11 @@
+p.tagged  {
+   color:red; 
+}
+
+li.tagged {
+    border: 5px solid green;
+}
+
+span.tagged{
+    color:green;
+}
